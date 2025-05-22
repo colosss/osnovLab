@@ -3,10 +3,10 @@
 #include <fstream>
 #include <cctype>
 //c
-#include <stdio.h>
+#include <stdio.h>    
 #include <ctype.h>
 #include <clocale>
-
+   
 using namespace std;
 
 bool is_glas(char c){
@@ -14,7 +14,6 @@ bool is_glas(char c){
     return (c=='a'||c=='o'||c=='u'||c=='y'||c=='e'||c=='i');
 }
 int main_cpp(){
-    // setlocale(LC_ALL, "Russian");
     ifstream input("./files/input_text.txt");
     ofstream output("./files/output_text.txt");
     
