@@ -51,6 +51,11 @@ int main(){
     vvivod(str2);
     int i=0, k=0;
     while (i<l1){
+        if (str1[i]==str2[k]){
+            cout<<"Simvol: "<<str1[i]<<" == "<<str2[k]<<endl;
+            cout<<"Pozition: i = "<<i<<" & k = "<<k<<endl;
+            break;
+        }
         if (k<l2){
             k++;
         }
@@ -61,11 +66,7 @@ int main(){
             k=0;
             i++;
         }
-        if (str1[i]==str2[k]){
-            cout<<"Simvol: "<<str1[i]<<" == "<<str2[k]<<endl;
-            cout<<"Pozition: i = "<<i<<" & k = "<<k<<endl;
-            break;
-        }
+        
     }
     
     delete[] str1;

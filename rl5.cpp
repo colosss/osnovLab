@@ -32,9 +32,9 @@ int collich(int n, double m[]){
     double a=0, b=0;
     while (poz_a>poz_b or poz_a>n or poz_b>n){
         cout<<"Введите а"<<endl;
-        a=vvod_int();
+        a=vvod_double();
         cout<<"Введите b"<<endl;
-        b=vvod_int();
+        b=vvod_double();
         for (int i=0; i<n; i++){
             if (m[i]==a){
                 poz_a=i;

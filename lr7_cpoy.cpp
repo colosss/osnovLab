@@ -23,7 +23,7 @@ int vvod(char* str,int &size){
 }
 int lenght (char *str1){
     int n=0;
-    for(;str1[n]!='\o'; n++)
+    for(;str1[n]!='\0'; n++)
     return n;
 }
 
