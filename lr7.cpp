@@ -22,25 +22,14 @@ int vvod(char* str,int &size){
     return n;
 }
 
-int vvod_int(){
-    int x=0;
-    cin>>x;
-    while (cin.fail()){
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout<<"Vvedite znachenie zanovo"<<endl;
-        cin>>x;
 
-    }
-    return x;
-}
 void vvivod(char* arr){
     cout<<arr;
     cout<<endl;
 }
 
 int main(){
-    int size = 2;
+    int size = 256;
     char *str1=new char [size];
     char *str2= new char [size];
     cout<<"Vvedite pervyu stroky"<<endl;
