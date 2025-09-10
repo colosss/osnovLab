@@ -2,7 +2,7 @@
 #include <cmath>
 
 //Nomer po jurnaly
-int nn = 12;
+int nn =31;
 
 //Peremenay collichestva variantov
 int K;
@@ -16,7 +16,7 @@ int main()
     std::cin>>nn;
     std::cout<<"Введите колличество вариантов\n";
     std::cin>>K;
-    N = (nn-1)%K+1;
+    N = (nn)%K+1;
     std::cout<<"Номер работы "<<N<<std::endl;
     
     
