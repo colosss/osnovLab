@@ -6,11 +6,11 @@ private:
     double b=0;
     double x=0;
 public: 
-    void setk();
-    void setb();
-    void setx();
+    void setk(double _k);
+    void setb(double _b);
+    void setx(double _x);
     double getk();
     double getb();
     double getx();
-    double solve();
+    double Root();
 };

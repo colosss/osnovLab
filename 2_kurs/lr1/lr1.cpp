@@ -2,21 +2,18 @@
 
 using namespace std;
 
-void yravnenie::setk(){
-    cout<<"Vvedite k"<<endl;
-    cin>>yravnenie::k;
+void yravnenie::setk(double _k){
+    yravnenie::k=_k; 
 }
 
-void yravnenie::setb(){
-    cout<<"Vvedite b"<<endl;
-    cin>>yravnenie::b;
+void yravnenie::setb(double _b){
+    yravnenie::b=_b;
 }
-void yravnenie::setx(){
-    cout<<"Vvedite x"<<endl;
-    cin>>yravnenie::x;
+void yravnenie::setx(double _x){
+    yravnenie::x=_x;
 }
 
-double yravnenie::solve(){
+double yravnenie::Root(){
     return k*x+b;
 }
 double yravnenie::getk(){
@@ -32,10 +29,48 @@ double yravnenie::getx(){
 
 int main(){
     yravnenie y1;
-    y1.setb();
-    y1.setk();
-    y1.setx();
+    y1.setb(10);
+    y1.setk(6);
+    y1.setx(1);
     cout<<"B = "<<y1.getb()<<" K = "<<y1.getk()<<" X = "<<y1.getx()<<  endl;
-    cout<<"Yravnenie y=kx+b : y="<<y1.getk()<<"*"<<y1.getx()<<"+"<<y1.getb()<<endl;
-    cout<<"Otevet = "<<y1.solve()<<endl;
+    cout<<"Yravnenie y=kx+b : y=";
+    if (y1.getk()<0)cout<<"("<<y1.getk()<<")";
+    else cout<<y1.getk();
+    cout<<"*";
+    if(y1.getx()<0)cout<<"("<<y1.getx()<<")";
+    else cout<<y1.getx();
+    if (y1.getb()>=0) cout<<"+";
+    cout<<y1.getb()<<endl;
+    cout<<"Otevet = "<<y1.Root()<<endl;
+    cout<<endl;
+
+    y1.setb(-1.521);
+    y1.setk(-4.312);
+    y1.setx(0);
+    cout<<"B = "<<y1.getb()<<" K = "<<y1.getk()<<" X = "<<y1.getx()<<  endl;
+    cout<<"Yravnenie y=kx+b : y=";
+    if (y1.getk()<0)cout<<"("<<y1.getk()<<")";
+    else cout<<y1.getk();
+    cout<<"*";
+    if(y1.getx()<0)cout<<"("<<y1.getx()<<")";
+    else cout<<y1.getx();
+    if (y1.getb()>=0) cout<<"+";
+    cout<<y1.getb()<<endl;
+    cout<<"Otevet = "<<y1.Root()<<endl;
+    cout<<endl;
+
+    y1.setb(0);
+    y1.setk(0);
+    y1.setx(-31.213);
+    cout<<"B = "<<y1.getb()<<" K = "<<y1.getk()<<" X = "<<y1.getx()<<  endl;
+    cout<<"Yravnenie y=kx+b : y=";
+    if (y1.getk()<0)cout<<"("<<y1.getk()<<")";
+    else cout<<y1.getk();
+    cout<<"*";
+    if(y1.getx()<0)cout<<"("<<y1.getx()<<")";
+    else cout<<y1.getx();
+    if (y1.getb()>=0) cout<<"+";
+    cout<<y1.getb()<<endl;
+    cout<<"Otevet = "<<y1.Root()<<endl;
+    cout<<endl;
 }
