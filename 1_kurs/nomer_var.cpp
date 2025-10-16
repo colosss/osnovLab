@@ -19,5 +19,4 @@ int main()
     N = (nn)%K+1;
     std::cout<<"Номер работы "<<N<<std::endl;
     
-    
 }
